@@ -45,12 +45,12 @@ const addBookHandler = (request, h) => {
 
   books.push(newBooks);
 
-  const isSuccess = books.filters((book) => book.id === id).length > 0;
+  const isSuccess = books.filter((book) => book.id === id).length > 0;
 
   if (isSuccess) {
     const response = h.response({
       status: "success",
-      message: "Buku Berhasil ditambahkan",
+      message: "Buku berhasil ditambahkan",
       data: {
         bookId: id,
       },
